@@ -2,38 +2,12 @@
 
 {% block main %}
 
-<div class="container">
-    <h1 class="text-center mt-3">Learn about Seasons</h1>
-
-    <div class="row justify-content-center mt-4">
-        <ul class="nav justify-content-center">
-            {%  for sub_item in seasons %}
-            <li class="nav-item">
-                <a class="nav-link">{{sub_item}}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-
-    {{ text }}
-    <div class="row justify-content-center mt-3">
-        <div class="col-sm-12 col-lg-6 col-xl-3 mb-3">
-            <div class="card" style="width=10rem; background-color: mintcream;">
-                <div class="card-body">
-                    <h5 class="card-title">Season Name</h5>
-                    <p class="card-text">Season Description</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-12 col-lg-6 col-xl-3 mb-3">
-            <div class="card" style="width=10rem; background-color: mintcream;">
-                <div class="card-body">
-                    <h5 class="card-title">Season Name</h5>
-                    <p class="card-text">Season Description</p>
-                </div>
-            </div>
-        </div>
+<div class="jumbotron jumbotron-fluid d-flex align-items-center" style="height: 100vh">
+    <div class="container justify-content-center">
+        <h1 class="jumbotron-heading display-4 text-capitalize">Learn-Blog</h1>
+        <hr class="my-5">
+        <p class="lead">Short blogs to learn facts about the world and beyond ...</p>
+        <a class="btn btn-primary mt-3 text-white" href="{% url 'seasons' %}">Let's Learn about Seasons!</a>
     </div>
 </div>
 
