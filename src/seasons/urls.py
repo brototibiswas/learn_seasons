@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view
-from blog.views import blog_season_detail_view
+from blog.views import blog_desc_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home_view),
-    path('blog/seasons',blog_season_detail_view, name="seasons")
+    path('blog/seasons',blog_desc_view, name="seasons")
 ]
