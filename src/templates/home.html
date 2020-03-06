@@ -7,6 +7,15 @@
         <h1 class="jumbotron-heading display-4 text-capitalize">Seasons</h1>
         <hr class="my-5">
         <p class="lead">Short blogs to learn about seasons around the world</p>
+        <p>Example of seasons: 
+            {% for item in seasons %}
+                {% if forloop.counter == seasons|length %}
+                    <span class="font-weight-bold">{{ item }}</span>
+                {% else %}
+                <span class="font-weight-bold">{{ item }} ,</span>
+                {% endif %}
+            {% endfor %}
+        </p>
         <a class="btn btn-primary mt-3 text-white" href="{% url 'seasons' %}">Let's Learn about Seasons!</a>
     </div>
 </div>
