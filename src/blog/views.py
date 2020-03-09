@@ -1,27 +1,20 @@
 from django.shortcuts import render
 
+# Create your views here.
+from .models import Season_Blog
 from .forms import BlogpostForm
 
-# Create your views here.
-from .models import Blog
+def season_post_create_view(request):
+    if request.method == "POST":
+        name = request.POST.get('season_name')
+        print(name)
 
-
-
-def blogpost_create_view(request):
-    form = BlogpostForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        form = BlogpostForm()
-   
-    context = {
-        'form' : form
-    }
-
-    print(request)
+    context = {}
     return render(request, "blog/blogpost_create.html", context)
 
+
 def blog_desc_view(request):
-    obj = Blog.objects.get(id=1)
+    obj = Season_Blog.objects.get(id=1)
     # context = {
     #     'title' : obj.title,
     #     'desc' : obj.desc
